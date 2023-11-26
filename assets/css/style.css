@@ -1,0 +1,155 @@
+/* defining variables */
+:root {
+    /* defining palette */
+    --darkest-color: black;
+    --light-color: white;
+    --dark-color: #0c0c0c;
+
+    /* assigning colors to their roles */
+    --primary-color: var(--darkest-color);
+    --secondary-color: var(--dark-color);
+    --accent-color: var(--light-color);
+
+    /* font style variables */
+    --main-font: 'Manrope', sans-serif;
+    --huge-text: 48px;
+    --medium-text: 16px;
+    --small-text: 12px;
+}
+
+/* setting color styles globally */
+body {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: var(--main-font);
+    max-width: 1080px;
+    margin: 0 auto;
+    font-size: var(--medium-text);
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: 700;
+}
+
+h2, p {
+    margin: 0;
+}
+
+/* setting flex & grid containers */
+
+header, #bio, #about, #works, footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about, #works, footer {
+    align-items: stretch;
+}
+
+/* overriding #bio align-items */
+#bio {
+    align-items: flex-end;
+    padding: 32px 0px;
+}
+
+#bio .section-content {
+    width: 30%;
+}
+
+.main-project, .project {
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+    column-gap: 8px;
+    padding: 8px;
+}
+
+    /* grid layout for projects */
+.grid-section {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+}
+
+        /* main project to span the whole first row */
+.main-project {
+    grid-column: 1 / -1;
+}
+
+h3 {
+    font-weight: inherit;
+    font-size: var(--small-text);
+    background-color: var(--dark-color);
+    padding: 4px 12px;
+    border-radius: 8px;
+    margin: 0px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: var(--small-text);
+    background-color: var(--dark-color);
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: var(--darkest-color);
+    box-shadow: 0 0 0 2px var(--light-color);
+}
+
+header, section {
+    border-bottom: 2px solid var(--dark-color);
+}
+
+header {
+    height: 100px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul {
+    justify-content: flex-end;
+    column-gap: 8px;
+}
+
+footer ul {
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.narrow {
+    width: 25%;
+    padding: 32px 0px;
+}
+
+.wide {
+    width: 75%;
+    padding: 32px 0px 32px 32px;
+}
+
+.section-title h2 {
+    font-size: var(--huge-text);
+    font-weight: 200;
+}
+
+#avatar {
+    width: 25%;
+    border-radius: 50%;
+}
+
+.section-title {
+    border-right: 2px solid var(--dark-color);
+}
