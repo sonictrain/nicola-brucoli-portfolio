@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Nicola's Portfolio</title>
@@ -16,27 +18,32 @@
 
     <!-- header & nav -->
     <header>
-        <h1>Nicola Brucoli ● Creative Developer</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Works</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
-                <li>
-                    <a href="#">Resume</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="header-wrapper">
+            <h1>Nicola Brucoli <span class="material-symbols-outlined">
+                    data_object
+                </span> Creative Developer</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Works</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacts</a>
+                    </li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- bio section with avatar & caption -->
-        <section id="bio">
+    <section id="bio">
+        <div id="bio-wrapper">
             <img src="https://placehold.co/400" id="avatar" />
             <div class="section-content">
                 <p>
@@ -44,7 +51,7 @@
                     et dolore magna.
                 </p>
             </div>
-    </div>
+        </div>
     </section>
 
     <!-- main container which includes "about" & "works" sections -->
@@ -52,50 +59,98 @@
 
         <!-- about section -->
         <section id="about">
-            <div class="section-title narrow">
-                <h2>About</h2>
-            </div>
-            <div class="section-content wide">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sunt earum pariatur aperiam.
-                    Aspernatur natus autem sit eaque eius, molestiae numquam veniam odit facilis perspiciatis nisi!
-                    Laudantium blanditiis veritatis consequuntur?
-                    Eveniet quia hic, dolores corporis amet expedita atque blanditiis minus magnam quae vero nihil
-                    soluta maiores quo temporibus labore eum sequi unde? Maxime tempore architecto similique recusandae
-                    molestiae ab nobis.
-                </p>
+            <div id="about-wrapper">
+                <div class="section-title narrow">
+                    <h2>About</h2>
+                </div>
+                <div class="section-content wide">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sunt earum pariatur aperiam.
+                        Aspernatur natus autem sit eaque eius, molestiae numquam veniam odit facilis perspiciatis nisi!
+                        Laudantium blanditiis veritatis consequuntur?
+                        Eveniet quia hic, dolores corporis amet expedita atque blanditiis minus magnam quae vero nihil
+                        soluta maiores quo temporibus labore eum sequi unde? Maxime tempore architecto similique
+                        recusandae
+                        molestiae ab nobis.
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- works section -->
         <section id="works">
-            <div class="section-title narrow">
-                <h2>Works</h2>
-            </div>
-            <div class="grid-section wide">
+            <div id="works-wrapper">
+                <div class="section-title narrow">
+                    <h2>Works</h2>
+                </div>
+                <div class="grid-section wide">
 
-                <!-- the class main project will be 1 row & 2 columns wide -->
-                <div class="main-project">
-                    <h3>Project Title</h3>
-                    <a href="#">Github</a>
-                </div>
+                    <!-- the class main project will be 1 row & 2 columns wide -->
+                    <div class="main-project">
+                        <h3>Login Screen</h3>
+                        <div class="project-preview" id="project1">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- the class project will be 1 row & 1 column wide -->
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <a href="#">Github Link</a>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <a href="#">Github Link</a>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <a href="#">Github Link</a>
-                </div>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <a href="#">Github Link</a>
+                    <!-- the class project will be 1 row & 1 column wide -->
+                    <div class="project">
+                        <h3>Volleyball Scorecounter</h3>
+                        <div class="project-preview" id="project2">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Digital Business Card</h3>
+                        <div class="project-preview" id="project3">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>React Travel Journal</h3>
+                        <div class="project-preview" id="project4">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>HoriSEOn Code Refactor</h3>
+                        <div class="project-preview" id="project5">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Personal Creative Portfolio</h3>
+                        <div class="project-preview" id="project6">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Fantasy Landing Page</h3>
+                        <div class="project-preview" id="project7">
+                            <div class="links">
+                                <a href="#">Github</a>
+                                <a href="#">Github</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -104,27 +159,32 @@
 
     <!-- footer to include the contact details -->
     <footer>
-        <div class="section-title narrow">
-            <h2>Contacts</h2>
-        </div>
-        <div class="section-content wide">
-            <ul>
-                <li>
-                    <a href="#">Mobile</a>
-                </li>
-                <li>
-                    <a href="#">Email</a>
-                </li>
-                <li>
-                    <a href="#">GitHub</a>
-                </li>
-                <li>
-                    <a href="#">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="#">Twitter</a>
-                </li>
-            </ul>
+        <div id="footer-wrapper">
+            <div class="section-title narrow">
+                <h2>Contacts</h2>
+            </div>
+            <div class="section-content wide">
+                <h4>Developed with <span class="material-symbols-outlined">
+                    sports_bar
+                    </span> by Nicola Brucoli</h4>
+                <ul>
+                    <li>
+                        <a href="#">Mobile</a>
+                    </li>
+                    <li>
+                        <a href="#">Email</a>
+                    </li>
+                    <li>
+                        <a href="#">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="#">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 
