@@ -15,6 +15,9 @@
     --huge-text: 48px;
     --medium-text: 16px;
     --small-text: 12px;
+
+    /* border variable */
+    --default-border: 2px solid var(--dark-color);
 }
 
 /* setting color styles globally */
@@ -22,112 +25,28 @@ body {
     background-color: var(--primary-color);
     color: var(--accent-color);
     font-family: var(--main-font);
-    max-width: 1080px;
     margin: 0 auto;
     font-size: var(--medium-text);
 }
 
-h1 {
-    font-size: inherit;
-    font-weight: 700;
-}
-
-h2, p {
-    margin: 0;
-}
-
-/* setting flex & grid containers */
-
 header, #bio, #about, #works, footer {
+    border-bottom: var(--default-border);
+    width: 100%;
+}
+
+/* Layout section: Flex, Grid and dimensions */
+
+#header-wrapper, #bio-wrapper, #about-wrapper, #works-wrapper, #footer-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
-#about, #works, footer {
-    align-items: stretch;
-}
-
-/* overriding #bio align-items */
-#bio {
-    align-items: flex-end;
-    padding: 32px 0px;
-}
-
-#bio .section-content {
-    width: 30%;
-}
-
-.main-project, .project {
-    background-color: #1f1f1f;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: end;
-    column-gap: 8px;
-    padding: 8px;
-}
-
-    /* grid layout for projects */
-.grid-section {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 300px;
-}
-
-        /* main project to span the whole first row */
-.main-project {
-    grid-column: 1 / -1;
-}
-
-h3 {
-    font-weight: inherit;
-    font-size: var(--small-text);
-    background-color: var(--dark-color);
-    padding: 4px 12px;
-    border-radius: 8px;
-    margin: 0px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    font-size: var(--small-text);
-    background-color: var(--dark-color);
-    padding: 4px 12px;
-    border-radius: 8px;
-}
-
-a:hover {
-    text-decoration: none;
-    background-color: var(--darkest-color);
-    box-shadow: 0 0 0 2px var(--light-color);
-}
-
-header, section {
-    border-bottom: 2px solid var(--dark-color);
-}
-
-header {
+#header-wrapper {
     height: 100px;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul {
-    justify-content: flex-end;
-    column-gap: 8px;
-}
-
-footer ul {
-    padding: 0px;
-    justify-content: space-between;
 }
 
 .narrow {
@@ -140,9 +59,83 @@ footer ul {
     padding: 32px 0px 32px 32px;
 }
 
-.section-title h2 {
+#about-wrapper, #works-wrapper, #footer-wrapper {
+    align-items: stretch;
+}
+
+#bio-wrapper {
+    align-items: flex-end;
+    padding: 32px 0px;
+}
+
+#bio-wrapper .section-content {
+    width: 30%;
+}
+
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-project, .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 8px;
+}
+
+.grid-section {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+}
+
+.main-project {
+    grid-column: 1 / -1; /* main project to span from the first (1) to the last (-1) column */
+}
+
+/* Headings & Paragraph */
+
+h1 {
+    font-size: inherit;
+    font-weight: 700;
+}
+
+h2 {
     font-size: var(--huge-text);
     font-weight: 200;
+}
+
+h3 {
+    font-weight: inherit;
+    font-size: var(--medium-text);
+    margin: 0px;
+}
+
+h4 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Style section */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: var(--small-text);
+    background-color: var(--dark-color);
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
 }
 
 #avatar {
@@ -151,5 +144,67 @@ footer ul {
 }
 
 .section-title {
-    border-right: 2px solid var(--dark-color);
+    border-right: var(--default-border);
+}
+
+.material-symbols-outlined {
+    vertical-align: bottom;
+}
+
+.links {
+    position: absolute;
+
+    /* it's not a random value it's equal to its child's bottom padding */
+    bottom: 4px;
+    left: 0px;
+    padding: 8px;
+}
+
+/* Projects section */
+
+.project-preview {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #FFFFFF;
+    background-position: top;
+    position: relative;
+    padding: 0px;
+    border-radius: 16px;
+}
+
+#project1 {
+    background-image: url("../images/login-screen.png");
+}
+
+#project2 {
+    background-image: url("https://placehold.co/600");
+}
+
+#project3 {
+    background-image: url("https://placehold.co/600");
+}
+
+#project4 {
+    background-image: url("https://placehold.co/600");
+}
+
+#project5 {
+    background-image: url("https://placehold.co/600");
+}
+
+#project6 {
+    background-image: url("https://placehold.co/600");
+}
+
+#project7 {
+    background-image: url("https://placehold.co/600");
+}
+
+/* pseudo classes */
+
+a:hover {
+    text-decoration: none;
+    background-color: var(--darkest-color);
+    box-shadow: 0 0 0 2px var(--light-color);
 }
