@@ -377,3 +377,11 @@ template {
 [hidden] {
     display: none;
 }
+
+/* Added Manually by Nicola Brucoli
+    ========================================================================== */
+
+h2, p {
+    margin: 0;
+}
+
