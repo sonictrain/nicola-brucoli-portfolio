@@ -14,7 +14,9 @@
 
     /* font style variables */
     --main-font: 'Manrope', sans-serif;
+
     --huge-text: 48px;
+    --big-text: 32px;
     --medium-text: 16px;
     --small-text: 12px;
 
@@ -45,6 +47,7 @@ header, #bio, #about, #works, footer {
     align-items: center;
     max-width: 1080px;
     margin: 0 auto;
+    padding: 0 32px;
 }
 
 #header-wrapper {
@@ -133,11 +136,6 @@ h3 {
     font-weight: inherit;
     font-size: var(--medium-text);
     margin: 0px;
-}
-
-h4 {
-    font-size: inherit;
-    font-weight: inherit;
 }
 
 p {
@@ -235,6 +233,12 @@ ul {
     color: var(--accent);
 }
 
+a.disabled {
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: default;
+}
+
 /* Projects section */
 
 .project-preview {
@@ -311,4 +315,108 @@ a[title]:hover::after {
     position: absolute;
     top: 100%;
     left: 0;
+}
+
+#bio-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+
+/* all rules outside of @media queries apply to devices 1201px and above */
+
+/* tablet css */
+
+@media (max-width: 1100px) {	
+    /* rules here apply to devices from 769px to 992px (inclusive) */
+
+    h1 {
+        width: 200px;
+    }
+
+    h2 {
+        font-size: var(--big-text);
+    }
+
+    a[title]:hover::after {
+        font-size: var(--small-text);
+    }
+
+    #bio-wrapper {
+        height: 300px;
+        column-gap: 1rem;
+    }
+
+    #avatar {
+        height: 100%;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .share {
+        vertical-align: bottom;
+        font-size: 1.55rem;
+    }
+
+    #footer-wrapper .section-content{
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+    }
+
+    .section-content ul {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: unset;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    .section-content h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: var(--small-text);
+    }
+
+}
+
+/* smartphone css */
+
+@media (max-width: 768px) {
+	/* rules here apply to devices from 0px to 768px (inclusive) */
+
+    #about-wrapper, #works-wrapper, #footer-wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        border-right: none;
+    }
+
+    #bio-wrapper {
+        height: 300px;
+        column-gap: 1rem;
+        align-items: center;
+    }
+
+    #bio-wrapper .section-content {
+        width: auto;
+    }
+
+    #avatar {
+        height: 80%;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .narrow {
+        padding-left: 2rem;
+    }
+
+    .wide {
+        width: auto;
+        padding-right: 32px;
+    }
+
 }
