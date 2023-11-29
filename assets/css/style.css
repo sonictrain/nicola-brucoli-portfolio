@@ -33,14 +33,22 @@ body {
     font-size: var(--medium-text);
 }
 
-header, #bio, #about, #works, footer {
+header,
+#bio,
+#about,
+#works,
+footer {
     border-bottom: var(--default-border);
     width: 100%;
 }
 
 /* Layout section: Flex, Grid and dimensions */
 
-#header-wrapper, #bio-wrapper, #about-wrapper, #works-wrapper, #footer-wrapper {
+#header-wrapper,
+#bio-wrapper,
+#about-wrapper,
+#works-wrapper,
+#footer-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -64,7 +72,9 @@ header, #bio, #about, #works, footer {
     padding: 32px 0px 32px 32px;
 }
 
-#about-wrapper, #works-wrapper, #footer-wrapper {
+#about-wrapper,
+#works-wrapper,
+#footer-wrapper {
     align-items: stretch;
 }
 
@@ -83,7 +93,8 @@ header, #bio, #about, #works, footer {
     column-gap: 8px;
 }
 
-ul, li {
+ul,
+li {
     margin: 0px;
     padding: 0px;
 }
@@ -98,7 +109,8 @@ ul, li {
     align-items: center;
 }
 
-.main-project, .project {
+.main-project,
+.project {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,7 +126,8 @@ ul, li {
 }
 
 .main-project {
-    grid-column: 1 / -1; /* main project to span from the first (1) to the last (-1) column */
+    grid-column: 1 / -1;
+    /* main project to span from the first (1) to the last (-1) column */
 }
 
 /* Headings & Paragraph */
@@ -166,7 +179,7 @@ a {
     font-size: var(--small-text);
     background-color: var(--dark-color);
     padding: 4px 12px;
-    border-radius: 8px;
+    border-radius: 4px;
     position: relative;
 }
 
@@ -190,7 +203,7 @@ ul {
 .links ul {
     column-gap: 0px;
     background-color: var(--dark-color);
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .links ul li {
@@ -249,7 +262,7 @@ a.disabled {
     background-color: var(--light-color);
     position: relative;
     padding: 0px;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #project1 {
@@ -325,10 +338,10 @@ a[title]:hover::after {
 
 /* all rules outside of @media queries apply to devices 1201px and above */
 
-/* tablet css */
+/* medium/large-screen css */
 
-@media (max-width: 1100px) {	
-    /* rules here apply to devices from 769px to 992px (inclusive) */
+@media screen and (max-width: 1100px) {
+    /* rules here apply to devices from 769px to 1100px (inclusive) */
 
     h1 {
         width: 200px;
@@ -358,7 +371,7 @@ a[title]:hover::after {
         font-size: 1.55rem;
     }
 
-    #footer-wrapper .section-content{
+    #footer-wrapper .section-content {
         flex-direction: column-reverse;
         padding-bottom: 0px;
     }
@@ -379,12 +392,14 @@ a[title]:hover::after {
 
 }
 
-/* smartphone css */
+/* medium-screen css */
 
-@media (max-width: 768px) {
-	/* rules here apply to devices from 0px to 768px (inclusive) */
+@media screen and (max-width: 768px) {
+    /* rules here apply to devices from 501px to 768px (inclusive) */
 
-    #about-wrapper, #works-wrapper, #footer-wrapper {
+    #about-wrapper,
+    #works-wrapper,
+    #footer-wrapper {
         flex-direction: column;
         justify-content: flex-start;
         padding: 0 1rem;
@@ -419,4 +434,41 @@ a[title]:hover::after {
         padding-right: 32px;
     }
 
+}
+
+/* small-screen css */
+
+@media screen and (max-width: 500px) {
+    /* rules here apply to devices from 0px to 500px (inclusive) */
+
+    #header-wrapper {
+        height: 100px;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1rem;
+    }
+
+    h1 {
+        width: unset;
+    }
+
+    #bio-wrapper {
+        flex-direction: column;
+        height: auto;
+        row-gap: 16px;
+    }
+
+    #avatar {
+        width: 100%;
+    }
+
+    .wide, .narrow {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .section-content ul {
+        justify-content: center;
+        column-gap: 10px;
+    }
 }
